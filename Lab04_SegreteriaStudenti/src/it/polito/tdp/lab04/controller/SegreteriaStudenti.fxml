@@ -27,7 +27,7 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox prefWidth="150.0" promptText="Corsi">
+                  <ComboBox fx:id="CorsiComboBox" prefWidth="150.0" promptText="Corsi">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -39,8 +39,11 @@
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="Cerca iscritti corso" />
+                  <Button fx:id="cercaIscrittiCorsoButton" mnemonicParsing="false" onAction="#doCercaIscrittiCorso" text="Cerca iscritti corso" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
             </HBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -49,32 +52,32 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="31.0" prefWidth="105.0">
+                  <TextField fx:id="txtMatricola" prefHeight="31.0" prefWidth="105.0">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" text="V">
+                  <Button fx:id="cercaStudenteButton" mnemonicParsing="false" onAction="#doCercaStudente" text="V">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <TextField editable="false">
+                  <TextField editable="false" promptText="Nome">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField editable="false" />
+                  <TextField editable="false" promptText="Cognome" />
                </children>
                <VBox.margin>
-                  <Insets top="10.0" />
+                  <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER_LEFT">
+                  <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="465.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Cerca corsi">
+                        <Button fx:id="cercaCorsiButton" mnemonicParsing="false" onAction="#doCercaCorsi" text="Cerca corsi">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -83,7 +86,7 @@
                   </HBox>
                   <HBox alignment="CENTER_RIGHT">
                      <children>
-                        <Button mnemonicParsing="false" text="Iscrivi" />
+                        <Button fx:id="iscriviButton" mnemonicParsing="false" onAction="#doIscrivi" text="Iscrivi" />
                      </children>
                   </HBox>
                </children>
@@ -91,8 +94,18 @@
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </HBox>
-            <TextArea prefHeight="200.0" prefWidth="200.0" />
-            <Button mnemonicParsing="false" text="Button" />
+            <TextArea fx:id="txtResult" editable="false">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin></TextArea>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="resetButton" mnemonicParsing="false" onAction="#doReset" text="Reset" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" />
