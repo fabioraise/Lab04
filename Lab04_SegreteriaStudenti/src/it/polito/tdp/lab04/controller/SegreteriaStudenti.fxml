@@ -27,7 +27,7 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="CorsiComboBox" prefWidth="150.0" promptText="Corsi">
+                  <ComboBox fx:id="corsiComboBox" prefWidth="150.0" promptText="Corsi">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -62,12 +62,12 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <TextField editable="false" promptText="Nome">
+                  <TextField fx:id="txtNome" editable="false" promptText="Nome">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField editable="false" promptText="Cognome" />
+                  <TextField fx:id="txtCognome" editable="false" promptText="Cognome" />
                </children>
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
